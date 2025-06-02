@@ -1,0 +1,16 @@
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.searchInput {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.searchInput:focus {
+  border-color: #007bff;
+}
