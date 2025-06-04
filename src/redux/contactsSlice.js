@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const savedContacts = JSON.parse(localStorage.getItem("contacts")) ?? [];
 
 const contactsSlice = createSlice({
   name: "contacts",
   initialState: {
-    items: savedContacts,
+    items: [],
   },
   reducers: {
     addContact(state, { payload }) {
@@ -19,3 +18,5 @@ const contactsSlice = createSlice({
 
 export const contactsReducer = contactsSlice.reducer;
 export const { addContact, deleteContact } = contactsSlice.actions;
+
+export const selectContacts = (state) => state.contacts.items;
